@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #14b9d5;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #9a9a9a;
+    --heading-color: #555;
+    --border-color: #f1f1f1;
+    --header-height: 870px;
+    --navbar-height: 100px;
+    --search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px;
+}
+
+.grid__column-3 {
+    padding: 16px;
+    width: 33.333%;
+}
+
+.grid__column-3-8 {
+    padding: 16px;
+    width: 66.667%;
+}
+
+/* animation */
+
+@keyframes easeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* button */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 95px;
+    min-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* highlight underline */
+
+.highlight__underline span{
+    position: relative;
+    z-index: 1;
+}
+
+.highlight__underline span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    /* left: 0;
+    bottom: 11px; */
+    z-index: -1;
+}
+
